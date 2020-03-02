@@ -1,0 +1,11 @@
+.film-page {
+    padding: 1rem;
+}
+
+.film-page .term:hover {
+    cursor: pointer;
+}
+
+.film-page table {
+    margin-right: 1rem;
+}
