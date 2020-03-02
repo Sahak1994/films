@@ -11,6 +11,7 @@
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0"
   },
+  "homepage": "http://sahak1994.github.io/films",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
