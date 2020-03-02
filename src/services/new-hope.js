@@ -39,7 +39,7 @@ export default class NewHopeService {
         },
         {
             id: 7,
-            name: '	Han Solo',
+            name: 'Han Solo',
             gender: 'male',
             height: 180,
         },
