@@ -2,52 +2,61 @@ import React, { Component } from 'react';
 
 import './film-page.css';
 
+import FilterGender from '../filter-gender';
+
 export default class FilmPage extends Component {
 
-    render() {
+    state = {
+        peopleList: null,
+        totalCount: null,
+        totalHeight: null,
+    }
 
+    getResource = () => {
+        return this.props.service.getAllPeople()
+            .map(p => {
+
+                return (
+                    <tr key={p.id}>
+                        <th scope="row">{p.id}</th>
+                        <td>{p.name}</td>
+                        <td>{p.gender}</td>
+                        <td>{p.height}</td>
+                    </tr>
+                )
+            })
+            
+    }
+
+    getHeight = () => {
+        return  this.props.service.getTotalHeight()
+    }
+
+    render() {
+        const {title, summary} = this.props.service;
+        const elements = this.getResource();
+        const totalHeight = this.getHeight()
         return (
             <div className="film-page">
-                <h6>A New Hope</h6>
-                <p>
-                    It is a period of civil war. Rebel spaceships,
-                    striking from a hidden base, have won their first
-                    victory against the evil Galactic Empire. During the
-                    battle, Rebel spies managed to steal secret plans to
-                    the Empire's ultimate weapon, the DEATH STAR, an
-                    armored space station with enough power to destroy 
-                    an entire planet. Pursued by the Empire's sinister
-                    agents, Princess Leia races home aboard her starship,
-                    custodian of the stolen plans that can save her people
-                    and restore freedom to the galaxy....
-                </p>
+                <h6>{title}</h6>
+                <p>{summary}</p>
+                <FilterGender />
                 <table className="table table-bordered">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col" className="term">First</th>
-                            <th scope="col" className="term">Last</th>
-                            <th scope="col" className="term">Handle</th>
+                            <th>#</th>
+                            <th className="term">Name</th>
+                            <th className="term">Gender</th>
+                            <th className="term">Height(cm)</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                        {elements}
+                        <tr key={5}>
+                            <th scope="row">Total: {elements.length}</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>Total: {totalHeight}cm</td>
                         </tr>
                     </tbody>
                 </table>

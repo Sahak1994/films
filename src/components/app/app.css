@@ -2,7 +2,7 @@
     box-sizing: border-box;
     /* height: 600px; */
     float: left;
-    width: 20%;
+    width: 25%;
 }
 
 .app .right-side {
@@ -10,7 +10,7 @@
     border-left: 1px solid;
     /* height: 600px; */
     float: left;
-    width: 80%;
+    width: 75%;
 }
 
 .app:after {

@@ -1,4 +1,4 @@
-export default class NewHope {
+export default class NewHopeService {
 
     peopleList = [
         {
@@ -113,6 +113,7 @@ export default class NewHope {
 
     title = 'A New Hope';
 
+
     summary = `It is a period of civil war. Rebel spaceships,
         striking from a hidden base, have won their first victory 
         against the evil Galactic Empire. During the battle, Rebel 
@@ -125,5 +126,15 @@ export default class NewHope {
 
     getAllPeople = () => {
         return this.peopleList;
+    }
+
+    getTotalHeight = () => {
+        let totalHeight = 0;
+        this.peopleList.map(p => {
+            totalHeight += p.height;
+            return null
+        })
+
+        return totalHeight;
     }
 }

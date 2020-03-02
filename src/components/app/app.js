@@ -1,24 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
+
+import './app.css';
 
 import SelectFilm from '../select-film';
 import FilmPage from '../film-page';
-
-import NewHope from '../../services';
-import './app.css';
+import {NewHopeService} from '../../services';
 
 
-const App = () => {
+export default class App extends Component {
 
-    return (
-        <div className="app">
-            <div className="left-side">
-                <SelectFilm />
+    state = {
+        service: new NewHopeService(),
+    }
+
+    render() {
+        const {service} = this.state;
+
+        return (
+            <div className="app">
+                <div className="left-side">
+                    <SelectFilm />
+                </div>
+                <div className="right-side">
+                    <FilmPage service={service} />
+                </div>
             </div>
-            <div className="right-side">
-                <FilmPage />
-            </div>
-        </div>
-    )
+        )
+    }
 }
-
-export default App;

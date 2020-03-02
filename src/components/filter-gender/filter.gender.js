@@ -1,27 +1,19 @@
 import React, { Component } from 'react';
 
-import './select-film.css';
+import './filter-gender.css';
 
-export default class SelectFilm extends Component {
+export default class FilterGender extends Component {
 
     state = {
-        selectedFilm: 'Choose...',
-    }
 
-    handleChange = (e) => {
-        this.setState({
-            selectedFilm: e.target.value
-        })
     }
 
     render() {
 
         return (
-            <div className="select-film form-group">
+            <div className="filter-gender form-group">
                 <select className="form-control"
-                        id="exampleFormControlSelect2"
-                        value={this.state.selectedFilm}
-                        onChange={this.handleChange}>
+                        id="exampleFormControlSelect2">
                     <option value="Choose..." disabled>
                         Choose...
                     </option>

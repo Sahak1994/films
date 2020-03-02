@@ -9,3 +9,19 @@
 .film-page table {
     margin-right: 1rem;
 }
+
+.film-page table thead th {
+    padding: .5rem 2rem;
+}
+
+.film-page table tbody th {
+    padding: .5rem;
+}
+
+.film-page table tbody td {
+    padding: .5rem;
+}
+
+.film-page .table thead th {
+    text-align: center;
+}

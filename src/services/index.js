@@ -1,5 +1,5 @@
-import NewHope from './new-hope';
+import NewHopeService from './new-hope';
 
 export {
-    NewHope,
+    NewHopeService,
 }
