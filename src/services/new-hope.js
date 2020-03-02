@@ -128,6 +128,10 @@ export default class NewHopeService {
         return this.peopleList;
     }
 
+    getCount = () => {
+        return this.peopleList.length;
+    }
+
     getTotalHeight = () => {
         let totalHeight = 0;
         this.peopleList.map(p => {
