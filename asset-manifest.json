@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/films/static/css/main.5c43b709.chunk.css",
-    "main.js": "/films/static/js/main.0894add7.chunk.js",
-    "main.js.map": "/films/static/js/main.0894add7.chunk.js.map",
+    "main.css": "/films/static/css/main.5d2308e3.chunk.css",
+    "main.js": "/films/static/js/main.011e0f82.chunk.js",
+    "main.js.map": "/films/static/js/main.011e0f82.chunk.js.map",
     "runtime-main.js": "/films/static/js/runtime-main.8ebfc0cf.js",
     "runtime-main.js.map": "/films/static/js/runtime-main.8ebfc0cf.js.map",
-    "static/js/2.f51350b4.chunk.js": "/films/static/js/2.f51350b4.chunk.js",
-    "static/js/2.f51350b4.chunk.js.map": "/films/static/js/2.f51350b4.chunk.js.map",
+    "static/js/2.ec04c5df.chunk.js": "/films/static/js/2.ec04c5df.chunk.js",
+    "static/js/2.ec04c5df.chunk.js.map": "/films/static/js/2.ec04c5df.chunk.js.map",
     "index.html": "/films/index.html",
-    "precache-manifest.720431f52dad7f4cac722ce49ea7cb69.js": "/films/precache-manifest.720431f52dad7f4cac722ce49ea7cb69.js",
+    "precache-manifest.c3b9f8570a1f9e56a37846f6a82e556e.js": "/films/precache-manifest.c3b9f8570a1f9e56a37846f6a82e556e.js",
     "service-worker.js": "/films/service-worker.js",
-    "static/css/main.5c43b709.chunk.css.map": "/films/static/css/main.5c43b709.chunk.css.map",
-    "static/js/2.f51350b4.chunk.js.LICENSE.txt": "/films/static/js/2.f51350b4.chunk.js.LICENSE.txt"
+    "static/css/main.5d2308e3.chunk.css.map": "/films/static/css/main.5d2308e3.chunk.css.map",
+    "static/js/2.ec04c5df.chunk.js.LICENSE.txt": "/films/static/js/2.ec04c5df.chunk.js.LICENSE.txt",
+    "static/media/star-wars.jpg": "/films/static/media/star-wars.6862ca4e.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.8ebfc0cf.js",
-    "static/js/2.f51350b4.chunk.js",
-    "static/css/main.5c43b709.chunk.css",
-    "static/js/main.0894add7.chunk.js"
+    "static/js/2.ec04c5df.chunk.js",
+    "static/css/main.5d2308e3.chunk.css",
+    "static/js/main.011e0f82.chunk.js"
   ]
 }
