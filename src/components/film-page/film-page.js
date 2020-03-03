@@ -14,7 +14,7 @@ export default class FilmPage extends Component {
 	}
 
 	componentDidMount() {
-		
+
 		this.props.service.getAllPeople()
 			.then(peopleList => {
 				this.setState({peopleList})
@@ -24,7 +24,19 @@ export default class FilmPage extends Component {
 		.then(totalheight => {
 			this.setState({totalheight})
 		});
-		
+	}
+	componentDidUpdate(prevProps) {
+		if (prevProps.service !== this.props.service) {
+			this.props.service.getAllPeople()
+			.then(peopleList => {
+				this.setState({peopleList})
+			})
+
+			this.props.service.getTotalHeight()
+			.then(totalheight => {
+				this.setState({totalheight})
+			});
+		}
 	}
 
 	getResource = (arr) => {
@@ -43,35 +55,10 @@ export default class FilmPage extends Component {
 
 	changeOrder = (field) => {
 		this.setState({field})
-		// const arr = [...(this.state.filteredItems || this.state.peopleList)]
-		// 	.sort((a, b) => {
-		// 		if (a[field] < b[field]) {
-		// 			return -1
-		// 		} else {
-		// 			return 1
-		// 		}
-		// 	})
-		// this.setState({
-		// 	peopleList: arr,
-		// })
 	}
 
 	onFilterGender = (filter) => {
-		this.setState({filter})
-		// if (field !== 'none') {
-		// 	const arr = [...this.state.peopleList]
-		// 	.filter(p => p.gender === field);
-		
-		// 	const filteredItems = this.getResource(arr);
-		// 	console.log(filteredItems)
-		// 	this.setState({filteredItems})
-		// } else {
-		// 	const arr = [...this.state.peopleList];
-		// 	const filteredItems = this.getResource(arr);
-		// 	console.log(filteredItems)
-		// 	this.setState({filteredItems})
-		// }
-		
+		this.setState({filter})		
 	}
 
 	render() {

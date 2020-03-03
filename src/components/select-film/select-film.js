@@ -12,6 +12,7 @@ export default class SelectFilm extends Component {
         this.setState({
             selectedFilm: e.target.value
         })
+        this.props.selectFilm(e.target.value)
     }
 
     render() {
@@ -33,18 +34,6 @@ export default class SelectFilm extends Component {
                     </option>
                     <option value="the-phantom-menace">
                         The Phantom Menace
-                    </option>
-                    <option value="revenge-of-the-sith">
-                        Revenge of the Sith
-                    </option>
-                    <option value="return-of-the-jedi">
-                        Return of the Jedi
-                    </option>
-                    <option value="the-empire-strikes-back">
-                        The Empire Strikes Back
-                    </option>
-                    <option value="the-force-awakens">
-                        The Force Awakens
                     </option>
                 </select>
             </div>
