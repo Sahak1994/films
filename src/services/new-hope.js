@@ -5,7 +5,7 @@ export default class NewHopeService {
             id: 1,
             name: 'Beru Whitesun lars',
             gender: 'female',
-            height: 165
+            height: 165,
         },
         {
             id: 2,
@@ -124,15 +124,15 @@ export default class NewHopeService {
         custodian of the stolen plans that can save her people and
         restore freedom to the galaxy....`
 
-    getAllPeople = () => {
+    getAllPeople = async () => {
         return this.peopleList;
     }
 
-    getCount = () => {
+    getCount = async () => {
         return this.peopleList.length;
     }
 
-    getTotalHeight = () => {
+    getTotalHeight = async () => {
         let totalHeight = 0;
         this.peopleList.map(p => {
             totalHeight += p.height;
