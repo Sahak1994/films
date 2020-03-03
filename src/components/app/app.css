@@ -31,3 +31,11 @@
         height: 600px;
     }
 }
+
+.app img {
+    display: block;
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}

@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 
 import './app.css';
+import icon from './star-wars.jpg';
 
 import SelectFilm from '../select-film';
 import FilmPage from '../film-page';
+import Row from '../row';
 import {
     NewHopeService,
     AttackOfTheClones,
@@ -14,7 +16,7 @@ import {
 export default class App extends Component {
 
     state = {
-        service: new NewHopeService(),
+        service: 'none',
     }
 
     SelectFilm = (serviceName) => {
@@ -33,15 +35,20 @@ export default class App extends Component {
     render() {
         const {service} = this.state;
 
-        return (
-            <div className="app">
-                <div className="left-side">
-                    <SelectFilm selectFilm={this.SelectFilm} />
-                </div>
-                <div className="right-side">
-                    <FilmPage service={service} />
-                </div>
-            </div>
-        )
+        if (service !== 'none') {
+            return (
+                <Row 
+                    left={<SelectFilm selectFilm={this.SelectFilm} />}
+                    right={<FilmPage service={service} />} />
+            )
+        } else {
+            return (
+                <Row 
+                    left={<SelectFilm selectFilm={this.SelectFilm} />}
+                    right={<img src={icon} alt='icon' />} />
+            )
+        }
+
+        
     }
 }
